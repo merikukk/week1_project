@@ -184,7 +184,20 @@ require("./styles.css");
 //   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 // </div>
 // `;
-console.log("testiprkl");
+var mybutton = document.getElementById("my-button");
+mybutton.addEventListener("click", changeText);
+function changeText() {
+  //Elementin muutos
+  var elementToChange = document.getElementById("headline");
+  elementToChange.innerText = "My notebook";
+  //Printtaus:
+  console.log("hello world");
+}
+var secondButton = document.getElementById("add-data");
+secondButton.addEventListener("click", addList);
+function addList() {
+  //Lisää listaan elementin
+}
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -210,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33297" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44977" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

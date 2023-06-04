@@ -8,3 +8,22 @@ import "./styles.css";
 //   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 // </div>
 // `;
+let mybutton = document.getElementById("my-button");
+mybutton.addEventListener("click", changeText);
+
+function changeText() {
+  //Elementin muutos
+  let elementToChange = document.getElementById("headline");
+  elementToChange.innerText = "My notebook"
+  //Printtaus:
+  console.log("hello world");
+}
+
+let secondButton = document.getElementById("add-data");
+secondButton.addEventListener("click", addList);
+
+function addList() {
+    //Lisää listaan elementin
+    
+    
+}

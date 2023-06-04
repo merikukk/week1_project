@@ -197,6 +197,12 @@ var secondButton = document.getElementById("add-data");
 secondButton.addEventListener("click", addList);
 function addList() {
   //Lisää listaan elementin
+  var text = "This was added!";
+  var textNode = document.createTextNode(text);
+  var listItem = document.createElement("li");
+  listItem.appendChild(textNode);
+  var list = document.getElementById("listToAdd");
+  list.appendChild(listItem);
 }
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -223,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44977" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35243" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

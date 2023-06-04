@@ -14,7 +14,7 @@ mybutton.addEventListener("click", changeText);
 function changeText() {
   //Elementin muutos
   let elementToChange = document.getElementById("headline");
-  elementToChange.innerText = "My notebook"
+  elementToChange.innerText = "My notebook";
   //Printtaus:
   console.log("hello world");
 }
@@ -23,7 +23,14 @@ let secondButton = document.getElementById("add-data");
 secondButton.addEventListener("click", addList);
 
 function addList() {
-    //Lisää listaan elementin
-    
-    
+  //Lisää listaan elementin
+  const text = "This was added!";
+  const textNode = document.createTextNode(text);
+  const listItem = document.createElement("li");
+
+  listItem.appendChild(textNode);
+
+  const list = document.getElementById("listToAdd");
+
+  list.appendChild(listItem);
 }

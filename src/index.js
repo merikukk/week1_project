@@ -25,15 +25,16 @@ secondButton.addEventListener("click", addList);
 function addList() {
   //Lisää listaan elementin
   //   const text = "This was added!";
-  const text = document.getElementById("texthere").value;
-  if (text.length > 0) {
-    const textNode = document.createTextNode(text);
-    const listItem = document.createElement("li");
-
-    listItem.appendChild(textNode);
-
-    const list = document.getElementById("listToAdd");
-
-    list.appendChild(listItem);
+  let text = document.getElementById("texthere").value;
+  if (text.length < 1) {
+    text = "This was added!";
   }
+  const textNode = document.createTextNode(text);
+  const listItem = document.createElement("li");
+
+  listItem.appendChild(textNode);
+
+  const list = document.getElementById("listToAdd");
+
+  list.appendChild(listItem);
 }

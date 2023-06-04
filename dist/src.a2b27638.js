@@ -197,12 +197,15 @@ var secondButton = document.getElementById("add-data");
 secondButton.addEventListener("click", addList);
 function addList() {
   //Lisää listaan elementin
-  var text = "This was added!";
-  var textNode = document.createTextNode(text);
-  var listItem = document.createElement("li");
-  listItem.appendChild(textNode);
-  var list = document.getElementById("listToAdd");
-  list.appendChild(listItem);
+  //   const text = "This was added!";
+  var text = document.getElementById("texthere").value;
+  if (text.length > 0) {
+    var textNode = document.createTextNode(text);
+    var listItem = document.createElement("li");
+    listItem.appendChild(textNode);
+    var list = document.getElementById("listToAdd");
+    list.appendChild(listItem);
+  }
 }
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
